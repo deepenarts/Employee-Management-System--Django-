@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block start %}
+
+<div class="container col-4 card mt-4 shadow-lg p-4 bg-warning">
+    <button class="btn btn-primary mb-2 text-dark"> <a class="text-decoration-none text-white" href="/index">Home</a> </button>
+
+    <h1 class="text-center  fw-bold">Add Employee</h1>
+    <form action="/add_emp" method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Firstname</label>
+          <input type="text" class="form-control" id="first_name" name="first_name" value="{{first_name}}" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Lastname</label>
+            <input type="text" class="form-control" id="last_name" name="last_name" value="{{last_name}}" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Salary</label>
+            <input type="number" class="form-control" id="salary" name="salary" value="{{salary}}" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Department</label>
+            <input type="text" class="form-control" id="dept" name="dept" value="{{dept}}" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Role</label>
+            <input type="number" class="form-control" id="role" name="role" value="{{value}}" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Bonus</label>
+            <input type="number" class="form-control" id="bonus" name="bonus" value="{{bonus}}" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Phone</label>
+            <input type="number" class="form-control" id="phone" name="phone" value="{{phone}}" aria-describedby="emailHelp">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
+
+{% endblock start %}

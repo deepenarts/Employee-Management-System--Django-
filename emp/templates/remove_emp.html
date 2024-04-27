@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block start %}
+
+<div class= "container col-4 card shadow-lg mt-4 mx-auto px-0 bg-warning">
+  <button class="btn btn-primary mb-2 text-dark"> <a class="text-decoration-none text-white" href="/index">Home</a> </button>
+    <h1 class="text-center  fw-bold">Remove an employee</h1>
+    <hr>
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Choose an employee to be removed
+        </button>
+        <ul class="dropdown-menu">
+            {%for emp in emps%}
+          <li class="list bg-warning"><a class="dropdown-item" href="/remove_emp/{{emp.id}}">{{emp.first_name}} {{emp.last_name}}</a></li>
+            {%endfor%}
+        </ul>
+      </div>
+    
+{% endblock start %}

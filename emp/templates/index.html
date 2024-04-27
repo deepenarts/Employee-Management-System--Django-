@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block start %}
+
+    <div class = "container col-4  mt-4 mx-auto card shadow-lg mb-4 p-4 bg-warning">
+        <h1 class="text-center  fw-bold">Office Employee Management System</h1>
+        <hr>
+        <div class="cont col-6 mx-auto  ">
+
+            <div class="text-center bg-primary mb-2"><a class="btn btn-primary" href="/all_emp" role="button">View all employees</a></div>
+            <div class="text-center bg-primary mb-2"><a class="btn btn-primary" href="/add_emp" role="button">Add an employee</a></div>
+            <div class="text-center bg-primary mb-2"><a class="btn btn-primary" href="/remove_emp" role="button">Remove an employee</a></div>
+            <div class="text-center bg-primary mb-2"><a class="btn btn-primary" href="/filter_emp" role="button">Search employee</a></div>
+        </div>
+        <a class="btn btn-danger btn-sm" href="/logout">logout</logout>
+            
+    </div>
+
+
+        
+
+{% endblock start %}
+
